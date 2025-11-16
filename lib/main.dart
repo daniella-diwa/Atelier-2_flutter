@@ -13,13 +13,15 @@ class MainApp extends StatelessWidget {
       home: Scaffold(
         body: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                margin: EdgeInsets.all(20),
-                padding: EdgeInsets.all(16),
+                margin: EdgeInsets.symmetric(vertical: 30, horizontal: 10),
+                padding: EdgeInsets.all(24),
                 decoration: BoxDecoration(
-                  color: Colors.purple,
-                  borderRadius: BorderRadius.circular(24),
+                  color: Colors.teal,
+                  borderRadius: BorderRadius.circular(12),
                 ),
                 child: Text(
                   'Boîte stylisée avec Container',
@@ -30,7 +32,7 @@ class MainApp extends StatelessWidget {
               Text('salut!'),
               Text('Encore un texte!'),
               Stack(
-                alignment: Alignment.topRight,
+                alignment: Alignment.center,
                 children: [
                   Container(width: 200, height: 200, color: Colors.blue[100]),
                   Icon(Icons.star, size: 100, color: Colors.amber),
@@ -41,7 +43,7 @@ class MainApp extends StatelessWidget {
                 ],
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Icon(Icons.home, color: Colors.blue, size: 40),
@@ -54,11 +56,14 @@ class MainApp extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text('Titre principal', style: TextStyle(fontSize: 22)),
+                  Text(
+                    'Titre principal',
+                    style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
+                  ),
                   SizedBox(height: 20),
                   Text(
                     'Sous-titre ou description',
-                    style: TextStyle(fontSize: 16),
+                    style: TextStyle(fontSize: 14),
                   ),
                   Icon(Icons.thumb_up, color: Colors.green, size: 40),
                 ],
